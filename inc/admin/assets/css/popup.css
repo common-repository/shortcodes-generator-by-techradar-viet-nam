@@ -1,0 +1,462 @@
+/* Layout helpers
+----------------------------------*/
+#zf-shortcode-popup .ui-helper-hidden {
+    display: none;
+}
+#zf-shortcode-popup .ui-helper-hidden-accessible {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+#zf-shortcode-popup .ui-helper-reset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    line-height: 1.3;
+    text-decoration: none;
+    font-size: 100%;
+    list-style: none;
+}
+#zf-shortcode-popup .ui-helper-clearfix:before,
+#zf-shortcode-popup .ui-helper-clearfix:after {
+    content: "";
+    display: table;
+    border-collapse: collapse;
+}
+#zf-shortcode-popup .ui-helper-clearfix:after {
+    clear: both;
+}
+#zf-shortcode-popup .ui-helper-clearfix {
+    min-height: 0; /* support: IE7 */
+}
+#zf-shortcode-popup .ui-helper-zfix {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    opacity: 0;
+    filter:Alpha(Opacity=0);
+}
+
+#zf-shortcode-popup .ui-front {
+    z-index: 100;
+}
+
+
+/* Interaction Cues
+----------------------------------*/
+#zf-shortcode-popup .ui-state-disabled {
+    cursor: default !important;
+}
+
+
+/* Icons
+----------------------------------*/
+
+/* states and images */
+#zf-shortcode-popup .ui-icon {
+    display: block;
+    text-indent: -99999px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+}
+
+#zf-shortcode-popup .ui-icon-close {
+    background-position: -80px -128px;
+    display: inline-block;
+    margin: 0.6em 0.5em 0 0;
+    cursor: pointer;
+}
+
+#zf-shortcode-popup .ui-icon, #zf-shortcode-popup .ui-widget-content .ui-icon {
+    background-image: url("../images/ui-icons_222222_256x240.png");
+}
+
+/* Misc visuals
+----------------------------------*/
+
+/* Overlays */
+#zf-shortcode-popup .ui-widget-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#zf-shortcode-popup .ui-tabs {
+    position: relative;
+    padding: .2em;
+}
+#zf-shortcode-popup .ui-tabs .ui-tabs-nav {
+    margin: 0;
+    padding: .2em .2em 0 0;
+}
+#zf-shortcode-popup .ui-tabs .ui-tabs-nav li {
+    list-style: none;
+    float: left;
+    display: inline-block;
+    position: relative;
+    top: 0;
+    margin: 1px .2em 0 0;
+    border-bottom-width: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+#zf-shortcode-popup .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+    float: left;
+    color: #333;
+    padding: .5em 1em;
+    text-decoration: none;
+}
+#zf-shortcode-popup .ui-tabs .ui-tabs-nav li.ui-tabs-active {
+    margin-bottom: -1px;
+    padding-bottom: 1px;
+}
+
+#zf-shortcode-popup .ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,
+#zf-shortcode-popup .ui-tabs .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor,
+#zf-shortcode-popup .ui-tabs .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor {
+    cursor: text;
+}
+#zf-shortcode-popup .ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {
+    cursor: pointer;
+}
+#zf-shortcode-popup .ui-tabs .ui-tabs-panel {
+    display: block;
+    border-width: 0;
+    padding: 1em 0;
+    background: none;
+    border-top: 1px solid #aaaaaa;
+}
+
+#zf-shortcode-popup .ui-state-active,
+#zf-shortcode-popup .ui-widget-content .ui-state-active,
+#zf-shortcode-popup .ui-widget-header .ui-state-active {
+    border: 1px solid #aaaaaa;
+    background: #ffffff;
+    font-weight: normal;
+    color: #212121;
+}
+
+/* Main popup
+----------------------------------*/
+.mfp-wrap {
+    z-index: 10000;
+}
+.zf-button {
+    display: inline-block;
+    font-weight: 500;
+    outline: 0;
+    border-radius: 0;
+    color: white;
+    background: #ffffff;
+    text-decoration: none;
+    white-space: nowrap;
+    padding: 9px 16px;
+    line-height: 1.4;
+    vertical-align: baseline;
+    border: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
+}
+
+.zf-button-primary {
+    background: #4472B9;
+}
+.zf-button-primary:hover,
+.zf-button-primary:focus {
+    color: white;
+    background: #33588c;
+}
+
+.zf-button-red {
+    background: #D64937;
+}
+.zf-button-red:hover,
+.zf-button-red:focus {
+    color: white;
+    background: #ba4230;
+}
+
+#zf-shortcode-popup {
+    position: relative;
+    background: #FFF;
+    width:auto;
+    overflow: hidden;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+
+.zf-menu-shortcodes {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 45px;
+    height: 45px;
+    background: #FFFFFF;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.zf-menu-shortcodes span {
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #121212;
+    top: 50%;
+    margin-top: -1px;
+    left: 50%;
+    margin-left: -10px;
+    -webkit-transition: background 0.3s;
+    -moz-transition: background 0.3s;
+    transition: background 0.3s;
+}
+.zf-menu-shortcodes span::before, .zf-menu-shortcodes span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    background: inherit;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: -webkit-transform 0.3s, background 0s;
+    -moz-transition: -moz-transform 0.3s, background 0s;
+    transition: transform 0.3s, background 0s;
+}
+.zf-menu-shortcodes span::before {
+    top: -6px;
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+}
+.zf-menu-shortcodes span::after {
+    bottom: -6px;
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+}
+
+.zf-popup-header {
+    background-color: #EDECEC;
+    overflow: auto;
+}
+.zf-popup-header h3 {
+    line-height: 9px;
+    padding-left: 54px;
+}
+.zf-popup-content {
+    padding: 10px;
+    position: relative;
+    display: table;
+    width: 100%;
+    clear: both;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: -webkit-transform 500ms ease;
+    -moz-transition: -moz-transform 500ms ease;
+    -ms-transition: -ms-transform 500ms ease;
+    -o-transition: -o-transform 500ms ease;
+    transition: transform 500ms ease;
+}
+.zf-popup-content.move-right {
+    -ms-transform: translate(14.88rem, 0);
+    -webkit-transform: translate3d(14.88rem, 0, 0);
+    -moz-transform: translate3d(14.88rem, 0, 0);
+    -ms-transform: translate3d(14.88rem, 0, 0);
+    -o-transform: translate3d(14.88rem, 0, 0);
+    transform: translate3d(14.88rem, 0, 0);
+}
+
+.zf-popup-content label {
+    font-weight: bold;
+}
+.zf-popup-content .content-left {
+    -webkit-backface-visibility: hidden;
+    width: 14.88rem;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 1001;
+    box-sizing: content-box;
+    transition: transform 500ms ease 0s;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    -ms-transform: translate(-100%, 0);
+    -webkit-transform: translate3d(-100%, 0, 0);
+    -moz-transform: translate3d(-100%, 0, 0);
+    -ms-transform: translate3d(-100%, 0, 0);
+    -o-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    left: 0;
+}
+.zf-popup-content .content-left .zf-shortcode-filter {
+    padding: 6px;
+    
+}
+.zf-popup-content .content-right {
+    overflow: auto;
+    width: 100%;
+    height: 500px;
+}
+.zf-shortcode-list {
+
+}
+
+
+.zf-shortcode-list ul li {
+    color: #222;
+    padding: 10px 15px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.zf-shortcode-list ul li.sc-current{
+    background: #ededed;
+    color: #222;
+}
+
+.zf-shortcode-content {
+    display: none;
+    padding: 0 15px;
+}
+
+.zf-shortcode-content.sc-current{
+    display: block;
+}
+
+#zf-shortcode-popup .zf-field {
+    display: block;
+    width: 100%;
+}
+#zf-shortcode-popup textarea {
+    padding: 5px;
+    resize:vertical;
+    min-height:200px;
+}
+#zf-shortcode-popup .footer-button {
+    padding: 8px;
+    background: #EDECEC;
+    text-align: right;
+}
+
+.zf-shortcode-element {
+    margin: 15px 0;
+}
+.zf-shortcode-element label {
+    display: block;
+    font-weight: 700;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.zf-shortcode-element .form-desc {
+    font-style: italic;
+}
+.zf-shortcode-element .wp-picker-input-wrap {
+    display: inline-flex;
+}
+#child-shortcode h3 {
+    line-height: 29px;
+}
+#child-shortcode .button-add-item {
+    float: right;
+    margin-right: 4px;
+}
+/*==Fields==*/
+/* Image url */
+.zf-image-field {
+    position: relative;
+    margin-right: 109px;
+}
+.zf-image-field .zf-upload-image {
+    position: absolute;
+    right: -109px;
+    top: 0;
+}
+/* Spacing */
+.zf-spacing-field {
+    margin-top: 10px;
+}
+.zf-spacing-field label {
+    float: left;
+    font-weight: 400;
+}
+.zf-spacing-field input {
+    width: 45px;
+}
+.zf-spacing-field select{
+    width: auto !important;
+
+}
+.zf-radio-field label {
+    font-weight: 400;
+}
+/*responsive column*/
+.zf-column_responsive-field td {
+}
+
+.zf-icon-field-container {
+    height: 150px;
+    padding: 0 14px 5px;
+    overflow: auto;
+    border: 1px solid #DFDFDF;
+}
+
+.zf-icon-field-container .zf-font-awesomefont {
+    display: inline-block;
+    margin: 1px;
+    border: 1px solid transparent;
+}
+
+.zf-icon-field-container .zf-font-awesomefont.selected,
+.zf-icon-field-container .zf-font-awesomefont:hover,
+.zf-icon-field-container .zf-font-awesomefont:focus,
+.zf-icon-field-container .zf-font-awesomefont:active {
+    border: 1px solid #4B5662;
+}
+
+.zf-icon-field-container .zf-font-awesomefont a {
+    text-decoration: none;
+    display: block;
+}
+
+.zf-icon-field-container .zf-font-awesomefont .fa {
+    color: #4B5662;
+    width: 34px;
+    font-size: 26px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 34px;
+    height: 34px;
+    margin: 7px;
+}
+

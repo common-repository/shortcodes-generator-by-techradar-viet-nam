@@ -1,0 +1,22 @@
+
+.section {
+    overflow: hidden;
+    position: relative;
+    padding: 100px 0;
+}
+
+.wow {
+    visibility: hidden;
+    opacity: 0;
+}
+.zf-text {
+    position: relative;
+    margin: auto;
+}
+.animated {
+    visibility: visible;
+    opacity: 1;
+}
+.no-padding {
+    padding: 0;
+}
